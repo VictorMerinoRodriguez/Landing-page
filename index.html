@@ -5,6 +5,7 @@
     <title>Formulario Multipasos :: Urian Viera</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style></style>
   </head>
   <body>
     <div class="container">
@@ -40,17 +41,17 @@
         </div>
       </div>
       <div class="form-outer">
-        <form action="#">
+        <form method="post" action="https://script.google.com/macros/s/AKfycbxuUh1CznKy2Nov2tmST1iGsmrgnaFdcH3Oj9y14-0gHEWfVMO8DEjA2HbVrFbXVCQE/exec">
           <div class="page slide-page">
               <div class="title">¿En qué está interesado?</div>
                 <div class="radio-input">
                   <div class="radio-input-item" id="div1">
                     <label for="comprar">Comprar</label>
-                    <input type="radio" name="interes" id="comprar">
+                    <input type="radio" name="interes" id="comprar" value="comprar">
                   </div>
                   <div class="radio-input-item" id="div2">
                     <label for="vender">Vender</label>
-                    <input type="radio" name="interes" id="vender">
+                    <input type="radio" name="interes" id="vender" value="vender">
                   </div>
                 </div>  
             <div class="field">
@@ -62,19 +63,19 @@
             <div class="radio-input">
               <div class="radio-input-item" id="div3">
                 <label for="casa">Casa</label>
-                <input type="radio" name="inmueble" id="casa">
+                <input type="radio" name="inmueble" id="casa" value="casa">
               </div>
               <div class="radio-input-item" id="div4">
                 <label for="piso">Piso</label>
-                <input type="radio" name="inmueble" id="piso">
+                <input type="radio" name="inmueble" id="piso" value="piso">
               </div>
               <div class="radio-input-item" id="div5">
                 <label for="terreno">Terreno</label>
-                <input type="radio" name="inmueble" id="terreno">
+                <input type="radio" name="inmueble" id="terreno" value="terreno">
               </div>
               <div class="radio-input-item" id="div6">
                 <label for="local">Local</label>
-                <input type="radio" name="inmueble" id="local">
+                <input type="radio" name="inmueble" id="local" value="local">
               </div>
             </div>
             <div class="field btns">
@@ -86,15 +87,15 @@
           <div class="page">
             <div class="field">
               <div class="label" id="precio">¿Por qué precio querría comprar?</div>
-              <input type="number">
+              <input type="number" name="number">
             </div>
             <div class="field">
               <div class="label" id="tiempo">¿Cuando tiene pensado comprar?</div>
-              <select>
-                <option>Tan pronto como sea posible</option>
-                <option>De 6 a 12 meses</option>
-                <option>De 1 a 2 años</option>
-                <option>En 2 años o más</option>
+              <select name="tiempo">
+                <option value="Tan pronto como sea posible">Tan pronto como sea posible</option>
+                <option value="De 6 a 12 messes">De 6 a 12 meses</option>
+                <option value="De 1 a 2 años">De 1 a 2 años</option>
+                <option value="En 2 años o más">En 2 años o más</option>
               </select>
             </div>
 
@@ -108,19 +109,19 @@
             <div class="title">Contacto</div>
             <div class="field">
               <div class="label">Nombre</div>
-              <input type="text">
+              <input type="text" name="nombre">
             </div>
             <div class="field">
               <div class="label">Email</div>
-              <input type="email">
+              <input type="email" name="email">
             </div>
             <div class="field">
               <div class="label">Teléfono</div>
-              <input type="number">
+              <input type="number" name="telefono">
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Atrás</button>
-              <button class="submit">Enviar</button>
+              <button type="submit" class="submit">Enviar</button>
             </div>
           </div>
         </form>
@@ -273,6 +274,5 @@ prevBtnFourth.addEventListener("click", function(event){
   current -= 1;
 });
     </script>
-
   </body>
 </html>
