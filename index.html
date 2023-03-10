@@ -2,14 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Formulario Multipasos :: Urian Viera</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Formulario Bonainmobiliaria</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo-transparente-blanco.png">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style></style>
   </head>
   <body>
     <div class="container">
-      <header>Registrar Cliente</header>
+      <header>Bonainmobiliaria</header>
       <div class="progress-bar">
         <div class="step">
           <p>Paso 1</p>
@@ -55,6 +57,7 @@
                   </div>
                 </div>  
             <div class="field">
+              <a href="https://bonainmobiliaria.es/politica_de_privacidad/" >Política de privacidad</a>
               <button class="firstNext next boton">Siguiente</button>
             </div>
           </div>
@@ -87,7 +90,7 @@
           <div class="page">
             <div class="field">
               <div class="label" id="precio">¿Por qué precio querría comprar?</div>
-              <input type="number" name="number">
+              <input type="number" name="precio">
             </div>
             <div class="field">
               <div class="label" id="tiempo">¿Cuando tiene pensado comprar?</div>
@@ -98,8 +101,12 @@
                 <option value="En 2 años o más">En 2 años o más</option>
               </select>
             </div>
+            <div class="field">
+              <div class="label">Aproximación de renta anual</div>
+              <input type="number" name="renta">
+            </div>
 
-            <div class="field btns boton">
+            <div class="field btns pas2">
               <button class="prev-2 prev">Atrás</button>
               <button class="next-2 next">Siguiente</button>
             </div>
@@ -109,15 +116,15 @@
             <div class="title">Contacto</div>
             <div class="field">
               <div class="label">Nombre</div>
-              <input type="text" name="nombre">
+              <input type="text" name="nombre" required>
             </div>
             <div class="field">
               <div class="label">Email</div>
-              <input type="email" name="email">
+              <input type="email" name="email" required>
             </div>
             <div class="field">
               <div class="label">Teléfono</div>
-              <input type="number" name="telefono">
+              <input type="number" name="telefono" required>
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Atrás</button>
@@ -150,54 +157,66 @@ const tiempo = document.getElementById('tiempo');
 
 comprar.addEventListener('click', function() {
   div1.style.border = '2px solid var(--main-color)';
+  div1.style.color ='var(--main-color)';
   precio.textContent = '¿Por qué precio querría comprar?';
   tiempo.textContent = '¿Cuándo tiene pensado comprar?';
 });
 
 vender.addEventListener('click', function() {
   div2.style.border = '2px solid var(--main-color)';
+  div2.style.color ='var(--main-color)';
   precio.textContent = '¿Qué presupuesto tienes?';
   tiempo.textContent = '¿Cuando tiene pensado vender?';
 });
 
 comprar.addEventListener('blur', function() {
     div1.style.border = '2px solid black';
+    div1.style.color ='black';
   });
 
 vender.addEventListener('blur', function() {
   div2.style.border = '2px solid black';
+  div2.style.color ='black';
 });
 
 casa.addEventListener('click', function() {
   div3.style.border = '2px solid var(--main-color)';
+  div3.style.color ='var(--main-color)';
 });
 
 piso.addEventListener('click', function() {
   div4.style.border = '2px solid var(--main-color)';
+  div4.style.color ='var(--main-color)';
 });
 
 casa.addEventListener('blur', function() {
     div3.style.border = '2px solid black';
+    div3.style.color ='black';
   });
 
 piso.addEventListener('blur', function() {
   div4.style.border = '2px solid black';
+  div4.style.color ='black';
 });
 
 local.addEventListener('click', function() {
   div6.style.border = '2px solid var(--main-color)';
+  div6.style.color ='var(--main-color)';
 });
 
 terreno.addEventListener('click', function() {
   div5.style.border = '2px solid var(--main-color)';
+  div5.style.color ='var(--main-color)';
 });
 
 terreno.addEventListener('blur', function() {
     div5.style.border = '2px solid black';
+    div5.style.color ='black';
   });
 
 local.addEventListener('blur', function() {
   div6.style.border = '2px solid black';
+  div6.style.color ='black';
 });
 
 
